@@ -14,7 +14,7 @@ const __dirname = path.resolve();
 
 app.use(cors({
   
-    origin: ["https://tracksub-frontend.vercel.app/","localhost:3001"],
+    origin: ["https://tracksub-frontend.vercel.app/","localhost:3000"],
     methods: ["POST", "GET"],
     credentials: true
 
