@@ -4,7 +4,6 @@ import bcrypt from "bcrypt"
 import { UserModel } from "../models/Users.js";
 
 const router = express.Router();
-const JWT_SECRET = process.env.JWT_SECRET
 
 router.post("/register", async(req, res)=>{
     const {username, password} = req.body
@@ -35,7 +34,7 @@ router.post("/login", async(req, res)=>{
         return res.json({message: "Username or Password is incorrect"})
     }
 
-    const token = jwt.sign({id: user._id}, JWT_SECRET)
+    const token = jwt.sign({id: user._id}, "secret")
     res.json({token, userID: user._id})
 })
 
