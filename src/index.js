@@ -14,7 +14,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://track-sub.onrender.com/", //http://localhost:3000
     methods: ["POST", "GET"],
     credentials: true,
   })
