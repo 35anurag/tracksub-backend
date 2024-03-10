@@ -14,7 +14,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://tracksub-frontend.vercel.app/", //https://tracksub-frontend.vercel.app/ http://localhost:3000
+    origin: "https://track-sub.onrender.com", //https://track-sub.onrender.com http://localhost:3000
     credentials: true,
   })
 );
