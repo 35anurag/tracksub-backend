@@ -14,8 +14,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://track-sub.onrender.com", //http://localhost:3000
-    methods: ["POST", "GET"],
+    origin: "https://track-sub.onrender.com", //https://track-sub.onrender.com http://localhost:3000
     credentials: true,
   })
 );
@@ -31,4 +30,4 @@ app.use("/subscription", subsRouter);
 app.options('*', cors());
 
 mongoose.connect(process.env.MONGO_DB_URI);
-app.listen(process.env.PORT, () => console.log("Server Started"));
+app.listen(process.env.PORT || 3001, () => console.log("Server Started"));
